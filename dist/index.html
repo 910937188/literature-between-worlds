@@ -269,7 +269,7 @@ function syncCinemaControls(){
 }
 function enterReading(updateURL=true){
  cinemaVideo.pause();cinemaGate.hidden=true;presentationShell.inert=false;presentationShell.removeAttribute('aria-hidden');document.body.classList.remove('cinema-open');
- if(updateURL){history.replaceState(null,'','#intro');$('intro').scrollIntoView({behavior:'instant'});$('intro h1').setAttribute('tabindex','-1');$('intro h1').focus({preventScroll:true});}updateScroll();
+ if(updateURL){history.replaceState(null,'','#intro');$('intro').scrollIntoView({behavior:'instant'});const heading=document.querySelector('#intro h1');heading.setAttribute('tabindex','-1');heading.focus({preventScroll:true});}updateScroll();
 }
 $('enterPresentation').addEventListener('click',()=>enterReading(true));
 $('cinemaSound').addEventListener('click',()=>{cinemaVideo.muted=!cinemaVideo.muted;if(cinemaVideo.paused)cinemaVideo.play().catch(()=>{});syncCinemaControls();});
