@@ -1,0 +1,6 @@
+services:
+  - type: web
+    name: literature-between-worlds
+    runtime: static
+    buildCommand: "true"
+    staticPublishPath: ./dist
