@@ -276,7 +276,8 @@ body.cinema-open{overflow:hidden;background:#302b26}
 .tour-photo-frame[data-orientation=landscape]{width:72vw}
 .tour-photo-frame>img{width:100%;height:100%;object-fit:cover;display:block}
 .ishikawa-tour[data-renderer=photographic] .tour-photo-frame>img{visibility:hidden}
-.tour-photo-frame .library-scene canvas{opacity:1;transition:none}
+.tour-photo-frame .library-scene canvas{opacity:0;transition:none}
+.ishikawa-tour[data-renderer=photographic] .library-scene canvas{opacity:1}
 .ishikawa-tour[data-renderer=photo-fallback] .library-scene{display:none}
 .tour-shade{position:absolute;inset:0;pointer-events:none;background:linear-gradient(180deg,#090a0d38,transparent 22%,transparent 72%,#140e0c55),linear-gradient(90deg,#171619 0%,#17161944 39%,transparent 54%)}
 .ishikawa-tour .library-masthead{top:max(30px,env(safe-area-inset-top));left:36px;right:auto;gap:13px;letter-spacing:.10em;font-size:15px;pointer-events:none;text-shadow:0 2px 14px #0009}
